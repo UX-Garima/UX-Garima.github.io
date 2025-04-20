@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Garima</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">G</div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="skills.html">Skills</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="contact-btn">Contact</button>
+  </header>
+
+  <section>
+    <h2 class="section-title">SKILLS</h2>
+    <h3 style="text-align:center">What I'm Good At</h3>
+    <div class="skills-grid">
+      <div class="skill">
+        <img src="https://via.placeholder.com/60" alt="User Research" />
+        <h4>User Research</h4>
+        <p>Understand users</p>
+      </div>
+      <!-- Add more skills -->
+    </div>
+
+    <h3 style="text-align:center">Softwares</h3>
+    <div class="software-grid">
+      <div class="software">
+        <img src="https://via.placeholder.com/60" alt="Figma" />
+        <h4>Figma</h4>
+      </div>
+      <!-- Add more softwares -->
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

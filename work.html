@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work | Garima</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">G</div>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="work.html" class="active">Work</a>
+      <a href="skills.html">Skills</a>
+      <a href="about.html">About</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="skills.html">Skills</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="contact-btn">Contact</button>
+  </header>
+
+  <section>
+    <h2 class="section-title">WORK/PROJECTS</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/300x200" alt="Toqi" />
+        <h3>Toqi</h3>
+        <p>Toqi is an AI sales agent...</p>
+        <span class="tag">Chat-bot</span>
+        <span class="tag">Dashboard</span>
+      </div>
+      <!-- Add the rest of your projects similarly -->
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
