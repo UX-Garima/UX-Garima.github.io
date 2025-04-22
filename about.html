@@ -1,40 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Garima</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <div class="logo">G</div>
-    <nav class="desktop-nav">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="skills.html">Skills</a>
-      <a href="about.html" class="active">About</a>
-    </nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="skills.html">Skills</a>
-      <a href="about.html">About</a>
+  <div class="body-wrapper">
+
+    <header>
+      <div class="logo">G</div>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="skills.html">Skills</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+      <button class="contact-btn" onclick="openModal()">Contact</button>
+
+    </header>
+
+    <main class="about-page">
+      <section class="about-hero">
+        <img src="images/about/garima-about-illustration.png" alt="Garima Illustration" class="about-illustration" />
+        <h2>Hey, I’m Garima</h2>
+        <ul class="about-info">
+          <li><span>📍</span> Location: New Delhi, India</li>
+          <li><span>🎨</span> Designation: UX/UI Designer</li>
+          <li><span>💼</span> Currently at: Xtage Technologies, Gurugram</li>
+          <li><span>📚</span> Self-Learning: Google UX Design Certificate + real-world projects</li>
+        </ul>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><img src="images/about/linkedin.svg" alt="LinkedIn"></a>
+          <a href="#" aria-label="Behance"><img src="images/about/behance.svg" alt="Behance"></a>
+          <a href="#" aria-label="Instagram"><img src="images/about/instagram.svg" alt="Instagram"></a>
+        </div>
+        <a class="resume-btn" href="#">RESUME</a>
+      </section>
+
+      <section class="text-block">
+        <h3>About me</h3>
+        <p>
+          My journey began with a background in Life Sciences and Education, where I initially focused on understanding
+          child development and educational theories—centered around meeting the needs of young learners. As my career
+          evolved, I transitioned into UX design, shifting my focus to understanding and meeting the diverse needs of
+          users across digital platforms.
+        </p>
+        <p> This transition from child-centered theories to user-centered design has been transformative. It's about
+          moving beyond theoretical frameworks aimed at specific demographics to creating digital experiences that
+          resonate with and cater to the real-world needs and behaviors of all users. In UX design, I blend my knowledge
+          of human behavior with creative problem-solving to craft interfaces that are not only functional but also
+          intuitive and enjoyable to use. <br><br>
+        </p>
+      </section>
+
+      <section class="text-block">
+        <h3>Self-Learning Adventures</h3>
+        <p>
+          Driven by curiosity, I embarked on a path of continuous learning. I believe in the power of ongoing education
+          and improvement—it's a never-ending loop. From completing <a href="#">Google’s UX Design Professional
+            Certificate</a> to diving into hands-on projects, each experience has enriched my skills and broadened my
+          perspective in UX design. I'm always eager to explore new techniques and innovations to enhance user
+          experiences. <br><br>
+        </p>
+      </section>
+
+      <section class="art-corner">
+        <h3>The Art Corner</h3>
+        <div class="art-grid" id="artGrid">
+          <!-- Populated by arts.json -->
+        </div>
+      </section>
+      <script>
+        fetch('data/arts.json')
+          .then(response => response.json())
+          .then(data => {
+            const grid = document.getElementById('artGrid');
+            data.forEach(art => {
+              const link = document.createElement('a');
+              link.href = art.url;
+              link.target = "_blank";
+
+              const img = document.createElement('img');
+              img.src = art.image;
+              img.alt = "Artwork";
+
+              link.appendChild(img);
+              grid.appendChild(link);
+            });
+          });
+
+      </script>
+      <script>
+        function openModal() {
+          document.getElementById("contact-modal").style.display = "flex";
+        }
+        function closeModal() {
+          document.getElementById("contact-modal").style.display = "none";
+        }
+      </script>
+
+    </main>
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-illustration">
+          <img src="images/about/contact-garima-illustration.png" alt="Girl illustration" />
+        </div>
+        <p><span class="pink">Hey!</span> Got a question or just want to say hi? I’m all ears.</p>
+        <form action="mailto:cgarima+portfolio@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <textarea name="message" placeholder="Write your message here..." required></textarea>
+          <button type="submit">SEND</button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><img src="images/about/linkedin.svg" alt="LinkedIn" /></a>
+          <a href="#"><img src="images/about/behance.svg" alt="Behance" /></a>
+          <a href="#"><img src="images/about/instagram.svg" alt="Instagram" /></a>
+        </div>
+      </div>
     </div>
-    <button class="contact-btn">Contact</button>
-  </header>
-
-  <section class="hero">
-    <img src="https://via.placeholder.com/200" alt="Garima Illustration" />
-    <h2>Hey, I'm Garima</h2>
-    <p>UX/UI Designer passionate about building intuitive and beautiful experiences.</p>
-  </section>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('mobileNav').classList.toggle('active');
-    }
-  </script>
+  </div>
 </body>
+
 </html>

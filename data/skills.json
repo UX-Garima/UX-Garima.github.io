@@ -1,0 +1,67 @@
+{
+    "coreSkills": [
+      {
+        "title": "User Research",
+        "icon": "images/skills/user-research.png",
+        "highlight": false,
+        "description": "Understand users"
+      },
+      {
+        "title": "Wireframing",
+        "icon": "images/skills/wireframing.png",
+        "highlight": false,
+        "description": ""
+      },
+      {
+        "title": "Information Architecture",
+        "icon": "images/skills/information-architecture.png",
+        "highlight": false,
+        "description": ""
+      },
+      {
+        "title": "Design Thinking",
+        "icon": "images/skills/design-thinking.png",
+        "highlight": false,
+        "description": ""
+      },
+      {
+        "title": "Responsive Design",
+        "icon": "images/skills/responsive-design.png",
+        "highlight": false,
+        "description": ""
+      },
+      {
+        "title": "Prototyping",
+        "icon": "images/skills/prototyping.png",
+        "highlight": false,
+        "description": ""
+      }
+    ],
+    "softwares": [
+      {
+        "title": "Figma",
+        "icon": "images/skills/figma.png"
+      },
+      {
+        "title": "Canva",
+        "icon": "images/skills/canva.png"
+      },
+      {
+        "title": "Miro",
+        "icon": "images/skills/miro.png"
+      },
+      {
+        "title": "Balsamiq",
+        "icon": "images/skills/balsamiq.png"
+      },
+      {
+        "title": "Medibang Paint",
+        "icon": "images/skills/medibang.png"
+      },
+      {
+        "title": "Notion",
+        "icon": "images/skills/notion.png"
+      }
+    ]
+  }
+  

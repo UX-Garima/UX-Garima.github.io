@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,71 +8,84 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montez&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Garima Logo" />
-    </div>
-    <nav class="desktop-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="work.html">Work</a>
-      <a href="skills.html">Skills</a>
-      <a href="about.html">About</a>
-    </nav>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="mobile-nav" id="mobileNav">
-      <button class="close-menu" onclick="toggleMenu()">✕</button>
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="skills.html">Skills</a>
-      <a href="about.html">About</a>
+  <div class="body-wrapper">
+
+    <header>
+      <div class="logo">
+        <img src="images/home/logo.png" alt="Garima Logo" />
+      </div>
+      <nav class="desktop-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="work.html">Work</a>
+        <a href="skills.html">Skills</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="mobile-nav" id="mobileNav">
+        <button class="close-menu" onclick="toggleMenu()">✕</button>
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="skills.html">Skills</a>
+        <a href="about.html">About</a>
+        <button class="contact-btn">Contact</button>
+      </div>
       <button class="contact-btn">Contact</button>
-    </div>
-    <button class="contact-btn">Contact</button>
-  </header>
+    </header>
 
-  <section class="hero">
-    <img src="images/garima-illustration.png" alt="Garima Illustration" class="hero-img" />
-    <h2 class="hero-title">Hey, I'm Garima</h2>
-    <p class="hero-subtitle">UX/UI Designer</p>
-  </section>
+    <section class="hero">
+      <img src="images/home/garima-illustration.png" alt="Garima Illustration" class="hero-img" />
+      <h2 class="hero-title">Hey, I'm Garima</h2>
+      <p class="hero-subtitle">UX/UI Designer</p>
+    </section>
 
-  <section>
-    <h2 class="section-title">DESIGN PROCESS</h2>
-    <div class="process">
-      <div class="step">
-        <img src="images/step1.png" alt="Understand the User" />
-        <h4>Understand the User</h4>
-        <p>Because designing without knowing the user is like cooking without tasting</p>
+    <section>
+      <h2 class="section-title">DESIGN PROCESS</h2>
+      <div class="process">
+        <div class="step">
+          <img src="images/home/step1.png" alt="Understand the User" />
+          <h4>Understand the User</h4>
+          <p>Because designing without knowing the user is like cooking without tasting</p>
+        </div>
+        <div class="step">
+          <img src="images/home/step2.png" alt="Define the Problem" />
+          <h4>Define the Problem</h4>
+          <p>No vague goals — just crisp, solvable problems</p>
+        </div>
+        <div class="step">
+          <img src="images/home/step3.png" alt="Ideate & Sketch" />
+          <h4>Ideate & Sketch</h4>
+          <p>Messy ideas first. Magic later</p>
+        </div>
+        <div class="step">
+          <img src="images/home/step4.png" alt="Design & Prototype" />
+          <h4>Design & Prototype</h4>
+          <p>Where rough sketches become real screens</p>
+        </div>
+        <div class="step">
+          <img src="images/home/step5.png" alt="Test & Iterate" />
+          <h4>Test & Iterate</h4>
+          <p>Repeat until it clicks. Literally</p>
+        </div>
       </div>
-      <div class="step">
-        <img src="images/step2.png" alt="Define the Problem" />
-        <h4>Define the Problem</h4>
-        <p>No vague goals — just crisp, solvable problems</p>
-      </div>
-      <div class="step">
-        <img src="images/step3.png" alt="Ideate & Sketch" />
-        <h4>Ideate & Sketch</h4>
-        <p>Messy ideas first. Magic later</p>
-      </div>
-      <div class="step">
-        <img src="images/step4.png" alt="Design & Prototype" />
-        <h4>Design & Prototype</h4>
-        <p>Where rough sketches become real screens</p>
-      </div>
-      <div class="step">
-        <img src="images/step5.png" alt="Test & Iterate" />
-        <h4>Test & Iterate</h4>
-        <p>Repeat until it clicks. Literally</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileNav');
-      menu.classList.toggle('active');
-    }
-  </script>
+    <footer style="text-align: center;">
+      <p>
+        &copy; All rights reserved.</p>
+      <p> Made with
+        <span style="color: #e25555;">&#9829;</span>
+      </p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mobileNav');
+        menu.classList.toggle('active');
+      }
+    </script>
+  </div>
 </body>
+
 </html>

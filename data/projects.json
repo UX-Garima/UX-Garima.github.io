@@ -1,0 +1,31 @@
+[
+    {
+      "title": "Toqi",
+      "description": "Toqi is an AI sales agent – unlike a typical bot, it doesn’t just pop, it interacts...",
+      "image": "images/projects/toqi.png",
+      "tags": ["Chat-bot", "Tags", "Website", "Dashboard", "Demo video"],
+      "slug": "toqi"
+    },
+    {
+      "title": "Pearch",
+      "description": "Pearch is a Shopify plugin that helps store managers streamline product sorting...",
+      "image": "images/projects/pearch.png",
+      "tags": ["Brand logo", "SaaS", "Website", "Email templates", "Video"],
+      "slug": "pearch"
+    },
+    {
+      "title": "EPCMD",
+      "description": "EPCMD is a data-driven product sorting and optimization dashboard...",
+      "image": "images/projects/epcmd.png",
+      "tags": ["Website", "Email template", "Authentication Screens", "Banners", "Admin portal"],
+      "slug": "epcmd"
+    },
+    {
+      "title": "Eco+Sort",
+      "description": "EcoSort is a smart waste management app that helps users sort their waste correctly...",
+      "image": "images/projects/ecosort.png",
+      "tags": ["Logo", "Mobile application", "Case study", "Personal project"],
+      "slug": "ecosort"
+    }
+  ]
+  
