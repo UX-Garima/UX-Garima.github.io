@@ -4,76 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <title>Skills | Garima</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="body-wrapper">
-    <header>
-      <div class="logo">G</div>
-      <nav class="desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="skills.html" class="active">Skills</a>
-        <a href="about.html">About</a>
-      </nav>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="mobile-nav" id="mobileNav">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="skills.html" class="active">Skills</a>
-        <a href="about.html">About</a>
-      </div>
-      <button class="contact-btn">Contact</button>
-    </header>
-
+    <div id="navbar"></div> <!-- Navbar gets loaded here -->
     <section>
       <h2 class="section-title">SKILLS</h2>
 
-      <h3 style="text-align:center">What I'm Good At</h3>
+      <h3 class="section-title-2">What I'm Good At</h3>
       <div class="skills-grid" id="coreSkills"></div>
 
-      <h3 style="text-align:center">Softwares</h3>
+      <h3 class="section-title-2">Softwares</h3>
       <div class="software-grid" id="softwareSkills"></div>
     </section>
 
-    <script>
-      function toggleMenu() {
-        document.getElementById('mobileNav').classList.toggle('active');
-      }
-
-      // Fetch and render skills
-      fetch('data/skills.json')
-        .then(response => response.json())
-        .then(data => {
-          const coreSkillsContainer = document.getElementById('coreSkills');
-          const softwareSkillsContainer = document.getElementById('softwareSkills');
-
-          data.coreSkills.forEach(skill => {
-            const div = document.createElement('div');
-            div.className = 'skill' + (skill.highlight ? ' highlighted' : '');
-            div.innerHTML = `
-            <img src="${skill.icon}" alt="${skill.title}" width="60" height="60"/>
-            <h4>${skill.title}</h4>
-            ${skill.description ? `<p>${skill.description}</p>` : ''}
-          `;
-            coreSkillsContainer.appendChild(div);
-          });
-
-          data.softwares.forEach(software => {
-            const div = document.createElement('div');
-            div.className = 'software';
-            div.innerHTML = `
-            <img src="${software.icon}" alt="${software.title}" width="60" height="60"/>
-            <h4>${software.title}</h4>
-          `;
-            softwareSkillsContainer.appendChild(div);
-          });
-        })
-        .catch(error => console.error('Error loading skills:', error));
-    </script>
+    <script src="js/skills.js"></script>
+    <div id="contactModal"></div> <!-- Contact modal gets loaded here -->
   </div>
+  <div id="footer"></div> <!-- Footer gets loaded here -->
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>

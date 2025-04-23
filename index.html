@@ -4,35 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <title>Garima | UX/UI Designer</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montez&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <div class="body-wrapper">
 
-    <header>
-      <div class="logo">
-        <img src="images/home/logo.png" alt="Garima Logo" />
-      </div>
-      <nav class="desktop-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="work.html">Work</a>
-        <a href="skills.html">Skills</a>
-        <a href="about.html">About</a>
-      </nav>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="mobile-nav" id="mobileNav">
-        <button class="close-menu" onclick="toggleMenu()">✕</button>
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="skills.html">Skills</a>
-        <a href="about.html">About</a>
-        <button class="contact-btn">Contact</button>
-      </div>
-      <button class="contact-btn">Contact</button>
-    </header>
+    <div id="navbar"></div> <!-- Navbar gets loaded here -->
 
     <section class="hero">
       <img src="images/home/garima-illustration.png" alt="Garima Illustration" class="hero-img" />
@@ -70,22 +53,11 @@
         </div>
       </div>
     </section>
-
-    <footer style="text-align: center;">
-      <p>
-        &copy; All rights reserved.</p>
-      <p> Made with
-        <span style="color: #e25555;">&#9829;</span>
-      </p>
-    </footer>
-
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById('mobileNav');
-        menu.classList.toggle('active');
-      }
-    </script>
+    <div id="contactModal"></div> <!-- Contact modal gets loaded here -->
   </div>
+  <div id="footer"></div> <!-- Footer gets loaded here -->
+  <!-- Should be at the end so it can detect footer, header and contactModel -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

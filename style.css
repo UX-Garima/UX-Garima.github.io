@@ -17,12 +17,15 @@ body {
 }
 
 .body-wrapper {
+  /* style.css */
+  background-image: url('../images/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* or contain / custom */
+  background-position: center top;
   background-color: var(--cream);
   border-radius: 20px;
-  margin: 2rem auto;
-  padding: 0;
-  max-width: 95%;
-  min-height: 95%;
+  margin: 2rem 2em 0em 2em;
   overflow: hidden;
 }
 
@@ -31,7 +34,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background-color: var(--cream);
   position: relative;
   border-radius: 30px;
 }
@@ -66,15 +68,16 @@ header {
   position: relative;
 }
 
-.desktop-nav a.active::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: var(--accent);
-  bottom: -4px;
-  left: 0;
+.desktop-nav a.active {
+  color: var(--accent); /* your pink color */
+  font-weight: bold;
 }
+
+/* Remove the underline effect */
+.desktop-nav a.active::after {
+  content: none;
+}
+
 
 .contact-btn {
   background-color: var(--dark);
@@ -86,6 +89,7 @@ header {
   font-weight: bold;
 }
 
+/* MENU TOGGLE BUTTON */
 .menu-toggle {
   display: none;
   background: none;
@@ -95,37 +99,76 @@ header {
   cursor: pointer;
 }
 
+/* MOBILE NAV CONTAINER */
 .mobile-nav {
   display: none;
   flex-direction: column;
+  align-items: center;
   position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
+  top: 80px;
+  right: 2em;
+  left: 2em;
+  padding: 1rem 1rem 1.5rem;
   background-color: var(--dark);
-  text-align: center;
-  z-index: 50;
+  border-radius: 20px;
+  z-index: 100;
 }
 
+/* WHEN ACTIVE */
 .mobile-nav.active {
   display: flex;
 }
 
+/* NAV LINKS */
 .mobile-nav a {
   color: white;
-  padding: 1rem;
+  padding: 0.75rem;
   text-decoration: none;
-  border-top: 1px solid #444;
+  width: 100%;
+  transition: color 0.3s ease;
+  text-align: center;
 }
 
-.close-menu {
-  background: none;
+/* CONTACT BUTTON */
+.mobile-nav .contact-btn {
+  background-color: white;
+  color: var(--dark);
   border: none;
-  color: white;
-  font-size: 1.5rem;
-  align-self: flex-end;
-  margin: 0.5rem 1rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
+  width: 70%;
+}
+
+/* HOVER STATE — make text pink */
+.mobile-nav a:hover {
+  color: var(--accent);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.mobile-nav .contact-btn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+.mobile-nav .contact-btn {
+  display: block !important;
+}
+
+
+/* CLOSE BUTTON — FLOATING OUTSIDE */
+.close-menu {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero {
@@ -145,18 +188,28 @@ header {
   font-size: 96px;
   line-height: 1;
   margin-bottom: 0.5rem;
+  font-weight: lighter;
 }
 
 .hero-subtitle {
   color: var(--accent);
-  font-weight: bold;
   font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  font-weight: 70;
+  font-size: 36px;
 }
+
 
 .section-title {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  margin: 3rem 0 2rem;
+}
+
+.section-title-2 {
+  text-align: center;
+  font-size: 1.5em;
   margin: 3rem 0 2rem;
 }
 
@@ -200,36 +253,81 @@ header {
 }
 
 .skill,
-.software,
-.project {
-  background-color: white;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.skill,
 .software {
+  padding: 1rem;
+  text-align: center;
   width: 150px;
 }
 
 .project {
+  background-color: #E1CD97;
+  border-radius: 2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
   width: 300px;
 }
 
-.skill img,
-.software img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 1rem;
+.skill,
+.software,
+.project {
+  position: relative;
+  overflow: hidden;
 }
 
-.project img {
-  width: 100%;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+.project a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
 }
+
+/* Base image styles */
+.skill img,
+.software img,
+.project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  position: relative;
+  padding: 2px;
+}
+
+.project-info{
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #F55C7B;
+  border-radius: 8px; /* optional: soften the background */
+}
+
+.project-description {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--text); /* or set a direct color like #333 */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+/* Hover state with pink tint */
+.project:hover {
+  filter: brightness(102%) contrast(92%) drop-shadow(2px 2px 2px rgb(157, 148, 156));
+}
+
+/* Hover state with pink tint */
+.skill:hover img,
+.software:hover img {
+  filter: invert(20%) sepia(71%) saturate(1356%) hue-rotate(316deg) brightness(102%) contrast(92%) drop-shadow(2px 2px 2px rgb(157, 148, 156));
+}
+
 
 .tag {
   display: inline-block;
@@ -246,20 +344,14 @@ header {
   margin: auto;
 }
 
-.about-hero {
-  text-align: center;
-  padding-bottom: 2rem;
-}
-
 .about-illustration {
   width: 200px;
-  margin-bottom: 1rem;
 }
 
 .about-hero h2 {
   font-family: 'Montez', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 1 em;
+  text-align: right;
 }
 
 .about-info {
@@ -270,6 +362,7 @@ header {
 }
 
 .about-info li {
+  list-style: none;
   margin-bottom: 0.5rem;
 }
 
@@ -287,7 +380,7 @@ header {
 
 .resume-btn {
   display: inline-block;
-  margin-top: 1rem;
+  margin: 1rem;
   padding: 0.5rem 1.2rem;
   background: var(--dark);
   color: white;
@@ -460,6 +553,20 @@ header {
   height: 30px;
 }
 
+.about-icons {
+  width: 15px;
+  height: auto;
+  padding-top: 18px;
+}
+.side-by-side-block {
+  display:inline-block;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.left-margin {
+  margin-left: 5%;
+}
 /* Close Button */
 .close-btn {
   position: absolute;
@@ -467,4 +574,26 @@ header {
   right: 16px;
   font-size: 22px;
   cursor: pointer;
+}
+
+/* Add this to your style.css */
+
+/* Footer Styles */
+footer {
+  color: #f5f5dc;
+  /* Cream color */
+  font-family: 'Open Sans', sans-serif;
+  /* You can customize this too */
+  z-index: 10;
+  /* Make sure it's above other content */
+}
+
+footer p {
+  margin: 5px 0;
+  /* Optional: Adds some space between lines */
+}
+
+footer .pink {
+  color: #e25555;
+  /* Pink color (for heart) */
 }

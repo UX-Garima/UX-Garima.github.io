@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <title>About | Garima</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,34 +12,60 @@
 <body>
   <div class="body-wrapper">
 
-    <header>
-      <div class="logo">G</div>
-      <nav class="desktop-nav">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="skills.html">Skills</a>
-        <a href="about.html" class="active">About</a>
-      </nav>
-      <button class="contact-btn" onclick="openModal()">Contact</button>
-
-    </header>
+    <div id="navbar"></div> <!-- Navbar gets loaded here -->
 
     <main class="about-page">
       <section class="about-hero">
-        <img src="images/about/garima-about-illustration.png" alt="Garima Illustration" class="about-illustration" />
-        <h2>Hey, I’m Garima</h2>
-        <ul class="about-info">
-          <li><span>📍</span> Location: New Delhi, India</li>
-          <li><span>🎨</span> Designation: UX/UI Designer</li>
-          <li><span>💼</span> Currently at: Xtage Technologies, Gurugram</li>
-          <li><span>📚</span> Self-Learning: Google UX Design Certificate + real-world projects</li>
-        </ul>
-        <div class="socials">
-          <a href="#" aria-label="LinkedIn"><img src="images/about/linkedin.svg" alt="LinkedIn"></a>
-          <a href="#" aria-label="Behance"><img src="images/about/behance.svg" alt="Behance"></a>
-          <a href="#" aria-label="Instagram"><img src="images/about/instagram.svg" alt="Instagram"></a>
+        <div class="side-by-side-block">
+          <h2>Hey, I’m Garima</h2>
+          <img src="images/about/garima-about-illustration.png" alt="Garima Illustration" class="about-illustration" />
         </div>
-        <a class="resume-btn" href="#">RESUME</a>
+        <div class="side-by-side-block left-margin">
+          <ul class="about-info">
+            <li>
+              <img src="images/about/location-icon.png" alt="Location Icon" class="about-icons" />
+              Location: New Delhi, India
+            </li>
+            <li>
+              <img src="images/about/designation-icon.png" alt="Designation Icon" class="about-icons" />
+              Designation: UX/UI Designer
+            </li>
+            <li>
+              <img src="images/about/company-icon.png" alt="Company Icon" class="about-icons" />
+              Currently at: Xtage Technologies, Gurugram
+            </li>
+            <li>
+              <img src="images/about/book-icon.png" alt="Learning Icon" class="about-icons" />
+              Self-Learning: Google UX Design Certificate + real-world projects
+            </li>
+          </ul>
+          <a class="resume-btn" href="#">RESUME</a>
+        </div>
+        <div class="side-by-side-block left-margin">
+
+            <ul style="  list-style: none; padding-bottom: 50%;">
+              <li>
+                <a href="https://www.linkedin.com/in/garimaprofile" aria-label="LinkedIn"><img
+                    src="images/about/linkedin.svg" alt="LinkedIn"></a>
+
+              </li>
+              <li>
+                <a href="https://www.behance.net/garimachaudhary10" aria-label="Behance"><img
+                    src="images/about/behance.svg" alt="Behance"></a>
+
+              </li>
+              <li>
+                <a href="https://www.instagram.com/you_ducking_hooman" aria-label="Instagram"><img
+                    src="images/about/instagram.svg" alt="Instagram"></a>
+
+              </li>
+            </ul>
+
+        </div>
+
+
+
+
       </section>
 
       <section class="text-block">
@@ -61,7 +88,9 @@
         <h3>Self-Learning Adventures</h3>
         <p>
           Driven by curiosity, I embarked on a path of continuous learning. I believe in the power of ongoing education
-          and improvement—it's a never-ending loop. From completing <a href="#">Google’s UX Design Professional
+          and improvement—it's a never-ending loop. From completing <a
+            href="https://www.credly.com/badges/1ca6fa7a-3793-4272-a0e6-39ed96e60e9c/public_url">Google’s UX Design
+            Professional
             Certificate</a> to diving into hands-on projects, each experience has enriched my skills and broadened my
           perspective in UX design. I'm always eager to explore new techniques and innovations to enhance user
           experiences. <br><br>
@@ -94,38 +123,13 @@
           });
 
       </script>
-      <script>
-        function openModal() {
-          document.getElementById("contact-modal").style.display = "flex";
-        }
-        function closeModal() {
-          document.getElementById("contact-modal").style.display = "none";
-        }
-      </script>
 
     </main>
-    <!-- Contact Modal -->
-    <div id="contact-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <div class="modal-illustration">
-          <img src="images/about/contact-garima-illustration.png" alt="Girl illustration" />
-        </div>
-        <p><span class="pink">Hey!</span> Got a question or just want to say hi? I’m all ears.</p>
-        <form action="mailto:cgarima+portfolio@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="your@email.com" required>
-          <textarea name="message" placeholder="Write your message here..." required></textarea>
-          <button type="submit">SEND</button>
-        </form>
-        <div class="social-icons">
-          <a href="#"><img src="images/about/linkedin.svg" alt="LinkedIn" /></a>
-          <a href="#"><img src="images/about/behance.svg" alt="Behance" /></a>
-          <a href="#"><img src="images/about/instagram.svg" alt="Instagram" /></a>
-        </div>
-      </div>
-    </div>
+
+    <div id="contactModal"></div> <!-- Contact modal gets loaded here -->
   </div>
+  <div id="footer"></div> <!-- Footer gets loaded here -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
