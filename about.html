@@ -110,10 +110,8 @@
           .then(data => {
             const grid = document.getElementById('artGrid');
             data.forEach(art => {
-              const link = document.createElement('a');
-              link.href = art.url;
-              link.target = "_blank";
-              link.className = 'gallery__link';
+                const link = document.createElement('div');
+                link.className = 'gallery__link';
 
               const figure = document.createElement('figure');
               figure.className = 'gallery__thumb';
