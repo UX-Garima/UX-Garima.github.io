@@ -7,21 +7,26 @@ function loadSkills() {
 
       data.coreSkills.forEach(skill => {
         const div = document.createElement('div');
-        div.className = 'skill' + (skill.highlight ? ' highlighted' : '');
+        div.className = 'skill';
         div.innerHTML = `
-          <img src="${skill.icon}" alt="${skill.title}" width="60" height="60"/>
-          <h4>${skill.title}</h4>
-          ${skill.description ? `<p>${skill.description}</p>` : ''}
+          <div class="skill-icon-wrapper">
+            <img class="default-icon" src="${skill.icon}" alt="${skill.title}" width="60" height="60"/>
+            ${skill.hoverIcon ? `<img class="hover-icon" src="${skill.hoverIcon}" alt="${skill.title} Hover" width="60" height="60"/>` : ''}
+          </div>
+          <p class="skill-title">${skill.title}</p>
         `;
         coreSkillsContainer.appendChild(div);
       });
 
       data.softwares.forEach(software => {
         const div = document.createElement('div');
-        div.className = 'software';
+        div.className = 'skill';
         div.innerHTML = `
-          <img src="${software.icon}" alt="${software.title}" width="60" height="60"/>
-          <h4>${software.title}</h4>
+          <div class="skill-icon-wrapper">
+            <img class="default-icon" src="${software.icon}" alt="${software.title}" width="60" height="60"/>
+            ${software.hoverIcon ? `<img class="hover-icon" src="${software.hoverIcon}" alt="${software.title} Hover" width="60" height="60"/>` : ''}
+          </div>
+          <p class="skill-title">${software.title}</p>
         `;
         softwareSkillsContainer.appendChild(div);
       });

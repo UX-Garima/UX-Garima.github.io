@@ -3,64 +3,64 @@
       {
         "title": "User Research",
         "icon": "images/skills/user-research.png",
-        "highlight": false,
-        "description": ""
+        "hoverIcon": "/images/skills/user-research-hover.svg"
       },
       {
         "title": "Wireframing",
         "icon": "images/skills/wireframing.png",
-        "highlight": false,
-        "description": ""
+        "hoverIcon": "/images/skills/wireframing-hover.svg"
       },
       {
         "title": "Information Architecture",
         "icon": "images/skills/information-architecture.png",
-        "highlight": false,
-        "description": ""
+        "hoverIcon": "/images/skills/information-architecture-hover.svg"
       },
       {
         "title": "Design Thinking",
         "icon": "images/skills/design-thinking.png",
-        "highlight": false,
-        "description": ""
+        "hoverIcon": "/images/skills/design-thinking-hover.svg"
       },
       {
         "title": "Responsive Design",
         "icon": "images/skills/responsive-design.png",
-        "highlight": false,
-        "description": ""
+        "hoverIcon": "/images/skills/responsive-design-hover.svg"
       },
       {
         "title": "Prototyping",
         "icon": "images/skills/prototyping.png",
-        "highlight": false,
-        "description": ""
+        "hoverIcon": "/images/skills/prototyping-hover.svg"
       }
     ],
     "softwares": [
       {
         "title": "Figma",
-        "icon": "images/skills/figma.png"
+        "icon": "images/skills/figma.png",
+        "hoverIcon": "/images/skills/figma-hover.svg"
       },
       {
         "title": "Canva",
-        "icon": "images/skills/canva.png"
+        "icon": "images/skills/canva.png",
+        "hoverIcon": "/images/skills/canva-hover.svg"
       },
       {
         "title": "Miro",
-        "icon": "images/skills/miro.png"
+        "icon": "images/skills/miro.png",
+        "hoverIcon": "/images/skills/miro-hover.svg"
       },
       {
         "title": "Balsamiq",
-        "icon": "images/skills/balsamiq.png"
+        "icon": "images/skills/balsamiq.png",
+        "hoverIcon": "/images/skills/balsamiq-hover.svg"
       },
       {
         "title": "Medibang Paint",
-        "icon": "images/skills/medibang.png"
+        "icon": "images/skills/medibang.png",
+        "hoverIcon": "/images/skills/medibang-hover.svg"
       },
       {
         "title": "Notion",
-        "icon": "images/skills/notion.png"
+        "icon": "images/skills/notion.png",
+        "hoverIcon": "/images/skills/notion-hover.svg"
       }
     ]
   }

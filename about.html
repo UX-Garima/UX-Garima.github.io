@@ -39,27 +39,28 @@
               Self-Learning: Google UX Design Certificate + real-world projects
             </li>
           </ul>
-          <a class="resume-btn" href="#">RESUME</a>
+          <a class="resume-btn" target="_blank"
+            href="https://drive.google.com/drive/folders/1sxaiWZC0A1tTBKtjNmaJoIlA8Gkd7Z75">RESUME</a>
         </div>
         <div class="side-by-side-block left-margin">
 
-            <ul style="  list-style: none; padding-bottom: 50%;">
-              <li>
-                <a href="https://www.linkedin.com/in/garimaprofile" aria-label="LinkedIn"><img
-                    src="images/about/linkedin.svg" alt="LinkedIn"></a>
+          <ul style="  list-style: none; padding-bottom: 50%;">
+            <li>
+              <a href="https://www.linkedin.com/in/garimaprofile" aria-label="LinkedIn"><img
+                  src="images/about/linkedin.svg" alt="LinkedIn"></a>
 
-              </li>
-              <li>
-                <a href="https://www.behance.net/garimachaudhary10" aria-label="Behance"><img
-                    src="images/about/behance.svg" alt="Behance"></a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/garimachaudhary10" aria-label="Behance"><img
+                  src="images/about/behance.svg" alt="Behance"></a>
 
-              </li>
-              <li>
-                <a href="https://www.instagram.com/you_ducking_hooman" aria-label="Instagram"><img
-                    src="images/about/instagram.svg" alt="Instagram"></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/you_ducking_hooman" aria-label="Instagram"><img
+                  src="images/about/instagram.svg" alt="Instagram"></a>
 
-              </li>
-            </ul>
+            </li>
+          </ul>
 
         </div>
 
@@ -99,7 +100,7 @@
 
       <section class="art-corner" style="display: none;">
         <h3>The Art Corner</h3>
-        <div class="art-grid" id="artGrid">
+        <div class="gallery" id="artGrid">
           <!-- Populated by arts.json -->
         </div>
       </section>
@@ -112,12 +113,23 @@
               const link = document.createElement('a');
               link.href = art.url;
               link.target = "_blank";
+              link.className = 'gallery__link';
+
+              const figure = document.createElement('figure');
+              figure.className = 'gallery__thumb';
 
               const img = document.createElement('img');
               img.src = art.image;
-              img.alt = "Artwork";
+              img.alt = art.caption || "Artwork";
+              img.className = 'gallery__image';
 
-              link.appendChild(img);
+              const caption = document.createElement('figcaption');
+              caption.className = 'gallery__caption';
+              caption.textContent = art.caption || '';
+
+              figure.appendChild(img);
+              figure.appendChild(caption);
+              link.appendChild(figure);
               grid.appendChild(link);
             });
           });
