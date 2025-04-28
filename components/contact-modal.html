@@ -1,22 +1,41 @@
 <!-- contact-modal.html -->
 <div id="contact-modal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <div class="modal-illustration">
-        <img src="images/about/contact-garima-illustration.png" alt="Girl illustration" />
-      </div>
-      <p><span class="pink">Hey!</span> Got a question or just want to say hi? I’m all ears.</p>
-      <form action="mailto:cgarima137+portfolio@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="your@email.com" required>
-        <textarea name="message" placeholder="Write your message here..." required></textarea>
-        <button type="submit">SEND</button>
-      </form>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/garimaprofile"><img src="images/about/linkedin.svg" alt="LinkedIn" /></a>
-        <a href="https://www.behance.net/garimachaudhary10"><img src="images/about/behance.svg" alt="Behance" /></a>
-        <a href="https://www.instagram.com/you_ducking_hooman"><img src="images/about/instagram.svg" alt="Instagram" /></a>
-      </div>
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal-illustration">
+      <img src="images/about/contact-garima-illustration.png" alt="Girl illustration" />
+    </div>
+    <p><span class="pink">Hey!</span> Got a question or just want to say hi? I’m all ears.</p>
+
+    <!-- Alert for errors -->
+    <div id="form-error" class="alert" style="display:none;"></div>
+
+    <!-- Contact Form -->
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="5a752d93-72b2-47f8-8b8c-1ce8a1c65949">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="hidden" name="subject" value="[IMP] Someone is trying to reach out on your portfolio">
+      <textarea name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit" id="submit-btn">
+        SEND
+        <span id="spinner" class="spinner"></span>
+      </button>
+    </form>
+
+    <!-- Thank You Message -->
+    <div id="thank-you" class="thank-you-message" style="display:none;">
+      <h2>Thank You!</h2>
+      <p>Your message has been sent successfully!</p>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/garimaprofile"><img src="images/about/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="https://www.behance.net/garimachaudhary10"><img src="images/about/behance.svg" alt="Behance" /></a>
+      <a href="https://www.instagram.com/you_ducking_hooman"><img src="images/about/instagram.svg" alt="Instagram" /></a>
     </div>
   </div>
-  
+</div>
